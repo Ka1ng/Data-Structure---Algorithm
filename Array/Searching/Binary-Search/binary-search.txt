@@ -1,0 +1,29 @@
+1️⃣ What is Binary Search?
+Binary Search is an efficient algorithm for finding an item in a sorted list. 
+It works by repeatedly dividing the search interval in half. 
+If the target value is less than the middle element, the search continues in the lower half. 
+Otherwise, it continues in the upper half. This process repeats until the value is found.
+
+2️⃣ How Does It Work?
+Imagine you have a sorted list of numbers: [1, 3, 5, 7, 9, 11, 13] and you want to find the number 7.
+1. Compare 7 with the middle element (7). It matches! Return the position.
+2. If searching for 5:
+    - First middle is 7 (too high)
+    - Search left half: [1, 3, 5]
+    - New middle is 3 (too low)
+    - Search right portion: [5]
+    - Found at position 2
+If the number is not in the list (e.g., searching for 8), the search ends when the subarray becomes empty.
+
+3️⃣ Algorithm Steps
+1. Start with the entire sorted array
+2. Compare the target with the middle element:
+    - If equal, return the position
+    - If target is smaller, search the left half
+    - If target is larger, search the right half
+3. Repeat until the element is found or the subarray is empty
+4. If not found, return "Not Found"
+
+4️⃣ Time Complexity
+Best Case: Target is the middle element → O(1).
+Worst Case: Element not present → O(log n) (halves search space each step)
